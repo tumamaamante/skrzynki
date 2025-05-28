@@ -1,42 +1,42 @@
-// Dane skrzynek i skórek
+// Poprawione dane skrzynek i skórek
 const cases = [
     {
         id: 1,
         name: "Skrzynka Przełamująca",
-        image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/cases/case_breakout.7d70a0e1d8d7d8b3d7a7b7b5b5b5b5b5b5b5b5b5.png",
+        image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/730/9e03b8d20b9d199f9b6bcb0e0a2c4d2d8b0f8d0f.png",
         skins: [
-            { name: "M4A1-S | Cyrex", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_cu_m4a1s_cyrex_light_large.6a2b9b7b1b8e6a9c1a0a0a0a0a0a0a0a0.png", rarity: "Rzadki", value: "150 zł" },
-            { name: "AK-47 | Czerwony Lamina", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_cu_ak47_redline_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Rzadki", value: "120 zł" },
-            { name: "AWP | Asiimov", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_cu_awp_asimov_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Epicki", value: "400 zł" },
-            { name: "Desert Eagle | Konspiracja", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_deagle_cu_deagle_consiracy_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "20 zł" },
-            { name: "USP-S | Caiman", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_usp_silencer_cu_usp_caiman_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "15 zł" },
-            { name: "M9 Bayonet | Fale", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_m9_bayonet_am_doppler_phase4_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Legendarny", value: "2000 zł" }
+            { name: "M4A1-S | Cyrex", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "150 zł" },
+            { name: "AK-47 | Czerwony Lamina", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "120 zł" },
+            { name: "AWP | Asiimov", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Epicki", value: "400 zł" },
+            { name: "Desert Eagle | Konspiracja", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "20 zł" },
+            { name: "USP-S | Caiman", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "15 zł" },
+            { name: "M9 Bayonet | Fale", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Legendarny", value: "2000 zł" }
         ]
     },
     {
         id: 2,
         name: "Skrzynka Chromowa",
-        image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/cases/case_chroma.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png",
+        image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/730/5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png",
         skins: [
-            { name: "AK-47 | Wulkan", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_bloodsport_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Rzadki", value: "200 zł" },
-            { name: "M4A4 | Desolate Space", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_cu_m4a4_hellfire_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Rzadki", value: "180 zł" },
-            { name: "AWP | Fever Dream", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_gs_awp_fever_dream_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Epicki", value: "250 zł" },
-            { name: "P90 | Death by Kitty", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_p90_cu_p90_death_by_kitty_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "30 zł" },
-            { name: "Glock-18 | Water Elemental", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_cu_glock_water_elmental_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "25 zł" },
-            { name: "Karambit | Doppler", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_karambit_am_doppler_phase1_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Legendarny", value: "2500 zł" }
+            { name: "AK-47 | Wulkan", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "200 zł" },
+            { name: "M4A4 | Desolate Space", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "180 zł" },
+            { name: "AWP | Fever Dream", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Epicki", value: "250 zł" },
+            { name: "P90 | Death by Kitty", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "30 zł" },
+            { name: "Glock-18 | Water Elemental", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "25 zł" },
+            { name: "Karambit | Doppler", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Legendarny", value: "2500 zł" }
         ]
     },
     {
         id: 3,
         name: "Skrzynka Gamma",
-        image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/cases/case_gamma.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png",
+        image: "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/730/5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png",
         skins: [
-            { name: "AK-47 | Neon Rider", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_neon_rider_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Rzadki", value: "300 zł" },
-            { name: "USP-S | Kill Confirmed", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_usp_silencer_cu_usp_kill_confirmed_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Rzadki", value: "220 zł" },
-            { name: "AWP | Prince", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_gs_awp_prince_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Epicki", value: "350 zł" },
-            { name: "Desert Eagle | Code Red", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_deagle_cu_deagle_code_red_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "40 zł" },
-            { name: "M4A4 | Evil Daimyo", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_cu_m4a4_evil_daimyo_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Powszechny", value: "35 zł" },
-            { name: "Nóż Motylkowy | Gamma Doppler", image: "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_butterfly_am_doppler_phase2_light_large.5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d5d.png", rarity: "Legendarny", value: "3000 zł" }
+            { name: "AK-47 | Neon Rider", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "300 zł" },
+            { name: "USP-S | Kill Confirmed", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Rzadki", value: "220 zł" },
+            { name: "AWP | Prince", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Epicki", value: "350 zł" },
+            { name: "Desert Eagle | Code Red", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "40 zł" },
+            { name: "M4A4 | Evil Daimyo", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Powszechny", value: "35 zł" },
+            { name: "Nóż Motylkowy | Gamma Doppler", image: "https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU4naCaJDoQ74m7k4aPlfL1I77Ux29V4cB5j-vE8YijjFPl-EJkY2D7J9eWcVQ3Y1_B_FG_wu--1ZC7vJ_Nn3Bq6XZz5XfD30vL1RgbwUYbXlQ/360fx360f", rarity: "Legendarny", value: "3000 zł" }
         ]
     }
 ];
@@ -58,7 +58,7 @@ function init() {
         let caseElement = document.createElement('div');
         caseElement.className = 'case';
         caseElement.innerHTML = `
-            <img src="${cs.image}" alt="${cs.name}">
+            <img src="${cs.image}" alt="${cs.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/260x198?text=${encodeURIComponent(cs.name)}'">
             <div class="case-info">
                 <h3>${cs.name}</h3>
                 <p>Zawiera ${cs.skins.length} skórek</p>
@@ -94,7 +94,7 @@ function openCase(cs) {
         let skinElement = document.createElement('div');
         skinElement.className = 'skin-item';
         skinElement.innerHTML = `
-            <img src="${skin.image}" alt="${skin.name}">
+            <img src="${skin.image}" alt="${skin.name}" onerror="this.onerror=null; this.src='https://via.placeholder.com/260x194?text=${encodeURIComponent(skin.name)}'">
             <div class="skin-name">${skin.name}</div>
             <div class="skin-rarity rarity-${getRarityClass(skin.rarity)}">${skin.rarity}</div>
         `;
