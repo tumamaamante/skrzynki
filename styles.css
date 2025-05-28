@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00adb5;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00adb5;
+    text-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #eeeeee;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Stylowanie skrzynek */
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.case {
+    background: rgba(30, 30, 46, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.case:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 173, 181, 0.4);
+    background: rgba(40, 40, 60, 0.9);
+}
+
+.case img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #00adb5;
+}
+
+.case-info {
+    padding: 15px;
+}
+
+.case h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #00adb5;
+}
+
+.case p {
+    color: #bbbbbb;
+    font-size: 0.9rem;
+}
+
+/* Stylowanie ekranu losowania */
+.roll-screen {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    background: rgba(22, 22, 36, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}
+
+.roll-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #00adb5;
+}
+
+#roll-button {
+    background: linear-gradient(45deg, #00adb5, #0077b6);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4);
+}
+
+#roll-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 7px 20px rgba(0, 173, 181, 0.6);
+}
+
+#roll-button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Stylowanie paska z skinami */
+.skins-container {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    margin: 30px 0;
+    border-radius: 10px;
+    background: rgba(10, 10, 20, 0.7);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.skins-track {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: transform 0.1s linear;
+}
+
+.skin-item {
+    width: 160px;
+    height: 160px;
+    margin: 0 10px;
+    background: rgba(40, 40, 60, 0.9);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #393e46;
+    transition: all 0.2s ease;
+}
+
+.skin-item.winner {
+    border-color: #00adb5;
+    box-shadow: 0 0 20px rgba(0, 173, 181, 0.7);
+    transform: scale(1.05);
+}
+
+.skin-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.skin-item .skin-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #eeeeee;
+    font-weight: 500;
+}
+
+.skin-item .skin-rarity {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.rarity-common { background-color: #5a6268; color: #fff; }
+.rarity-uncommon { background-color: #117a43; color: #fff; }
+.rarity-rare { background-color: #0d47a1; color: #fff; }
+.rarity-epic { background-color: #6a0dad; color: #fff; }
+.rarity-legendary { background: linear-gradient(45deg, #ff8c00, #ffd700); color: #000; }
+
+/* Stylowanie wyniku */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+}
+
+.result h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00adb5;
+}
+
+.result-skin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.result-skin img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.result-info {
+    text-align: left;
+}
+
+.result-info h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.back-button {
+    background: #393e46;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #00adb5;
+}

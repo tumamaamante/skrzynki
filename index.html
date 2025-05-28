@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS:GO Case Opening Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CS:GO SKIN ROLLER</h1>
+            <p class="subtitle">Kliknij na skrzynkę, aby rozpocząć losowanie skórek!</p>
+        </header>
+
+        <div class="cases-grid" id="cases-grid">
+            <!-- Skrzynki będą dodane dynamicznie przez JavaScript -->
+        </div>
+
+        <div class="roll-screen" id="roll-screen">
+            <h2 id="roll-title">Losowanie skórek z: <span id="case-name"></span></h2>
+            <button id="roll-button">Losuj za darmo!</button>
+            
+            <div class="skins-container">
+                <div class="skins-track" id="skins-track">
+                    <!-- Skórki będą dodane dynamicznie -->
+                </div>
+            </div>
+            
+            <div class="result" id="result">
+                <h3>Gratulacje! Wylosowałeś:</h3>
+                <div class="result-skin">
+                    <img id="result-img" src="" alt="Skin">
+                    <div class="result-info">
+                        <h4 id="result-name"></h4>
+                        <p>Rzadkość: <span id="result-rarity"></span></p>
+                        <p>Wartość: <span id="result-value"></span></p>
+                    </div>
+                </div>
+                <button id="back-button">Wróć do skrzynek</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
