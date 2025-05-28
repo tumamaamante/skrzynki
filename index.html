@@ -4,43 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS:GO Case Opening Simulator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>CS:GO SKIN ROLLER</h1>
-            <p class="subtitle">Kliknij na skrzynkę, aby rozpocząć losowanie skórek!</p>
-        </header>
-
-        <div class="cases-grid" id="cases-grid">
-            <!-- Skrzynki będą dodane dynamicznie przez JavaScript -->
+    <header>
+        <div class="container">
+            <h1>CS:GO CASE OPENING</h1>
+            <div class="balance-container">
+                <span>Saldo:</span>
+                <div class="balance-value">1000 zł</div>
+            </div>
         </div>
+    </header>
 
-        <div class="roll-screen" id="roll-screen">
-            <h2 id="roll-title">Losowanie skórek z: <span id="case-name"></span></h2>
-            <button id="roll-button">Losuj za darmo!</button>
-            
-            <div class="skins-container">
-                <div class="skins-track" id="skins-track">
-                    <!-- Skórki będą dodane dynamicznie -->
-                </div>
+    <main class="container">
+        <section id="cases-section">
+            <h2>Wybierz skrzynkę</h2>
+            <div class="cases-grid" id="cases-grid">
+                <!-- Skrzynki będą generowane dynamicznie -->
+            </div>
+        </section>
+
+        <section id="roll-section" class="hidden">
+            <div class="case-header">
+                <h2 id="case-name">Skrzynka Przełamująca</h2>
+                <div class="case-cost">Koszt: <span id="case-cost">50</span> zł</div>
             </div>
             
-            <div class="result" id="result">
-                <h3>Gratulacje! Wylosowałeś:</h3>
-                <div class="result-skin">
-                    <img id="result-img" src="" alt="Skin">
-                    <div class="result-info">
-                        <h4 id="result-name"></h4>
-                        <p>Rzadkość: <span id="result-rarity"></span></p>
-                        <p>Wartość: <span id="result-value"></span></p>
+            <div class="roll-container">
+                <div class="skins-container">
+                    <div class="skins-track" id="skins-track">
+                        <!-- Skórki będą generowane dynamicznie -->
                     </div>
                 </div>
-                <button id="back-button">Wróć do skrzynek</button>
+                
+                <div class="roll-controls">
+                    <button id="roll-button" class="btn">Otwórz skrzynkę</button>
+                    <button id="back-button" class="btn btn-outline">Powrót</button>
+                </div>
             </div>
-        </div>
-    </div>
+            
+            <div id="result" class="hidden">
+                <h3>Wylosowano:</h3>
+                <div class="result-container">
+                    <img id="result-img" src="" alt="Wylosowany skin">
+                    <div class="result-info">
+                        <h4 id="result-name">Nazwa skina</h4>
+                        <div class="result-details">
+                            <div class="detail">
+                                <span>Wartość:</span>
+                                <span id="result-value">150 zł</span>
+                            </div>
+                            <div class="detail">
+                                <span>Rzadkość:</span>
+                                <span id="result-rarity" class="rarity-rare">Rzadki</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-balance">
+                    Nowe saldo: <span id="new-balance">950</span> zł
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
